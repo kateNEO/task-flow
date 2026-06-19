@@ -1,38 +1,37 @@
 @media (max-width: 768px) {
     .form {
         max-width: 90%;
+        height: 100%;
     }
     .wrapper{
         flex-direction: column;
         align-items: center;
-        column-gap: 0;
-        gap: 0;
+        height: 100%;
     }
 }
 
 .wrapper {
     display: flex;
     width: 100%;
+    height: 100%;
     justify-content: center;
-    gap: 10%
 }
 .form {
     border-right: 1px solid lightgray;
     width: 25vw;
-    height: 700px;
-    min-width: 300px;
+    height: 100%;
+    min-width: 400px;
     padding: 30px;
-    padding-top: 80px;
-    border-radius: 6px;
+    padding-top: 200px;
+    /*border-radius: 6px;*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .title {
-    color: black;
-    /*font-family: Outfit;*/
+    color: var(--mantine-color-text);
+    font-family: Outfit, var(--mantine-font-family);
     font-weight: 500;
     text-align: center;
+    margin-top: var(--mantine-spacing-md);
     margin-bottom: 50px;
 }
-
-

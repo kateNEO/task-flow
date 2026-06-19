@@ -1,37 +1,30 @@
 'use client'
 import {
-    Anchor,
     Button,
-    Checkbox,
     Paper,
     PasswordInput,
-    Text,
     TextInput,
     Title,
 } from '@mantine/core';
 
-
+import classes from './signUp.module.css';
+import {createUser} from "@/app/signUp/req";
 export default function SignUpPage() {
+    console.log("render")
     return (
-        <div>
-            <Paper>
-                <Title order={2}>
-                    Welcome back to Mantine!
+        <div className={classes.wrapper}>
+            <Paper className={classes.form}>
+                <Title order={2} className={classes.title}>
+                    Welcome to Task Flow!
                 </Title>
+                <TextInput label="Name" size="md" radius="md"/>
+                <TextInput label="Surname" size="md" mt="md" radius="md"/>
+                <TextInput label="Email address" placeholder="hello@gmail.com" size="md" radius="md" mt="md"/>
+                <PasswordInput label="Password" placeholder="Your password" mt="md" size="md" radius="md"/>
 
-                <TextInput label="Email address" placeholder="hello@gmail.com" size="md" radius="md" />
-                <PasswordInput label="Password" placeholder="Your password" mt="md" size="md" radius="md" />
-                <Checkbox label="Keep me logged in" mt="xl" size="md" />
-                <Button fullWidth mt="xl" size="md" radius="md">
-                    Login
+                <Button fullWidth mt="xl" size="md" radius="md" color='orange' onClick={createUser}>
+                    Register
                 </Button>
-
-                <Text ta="center" mt="md">
-                    Don&apos;t have an account?{' '}
-                    <Anchor href="#" fw={500} onClick={(event) => event.preventDefault()}>
-                        Register
-                    </Anchor>
-                </Text>
             </Paper>
         </div>
     );
