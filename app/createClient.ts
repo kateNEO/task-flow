@@ -1,5 +1,5 @@
 import {createClient} from '@supabase/supabase-js';
-import {env} from "@/app/signUp/env";
+import {env} from "@/app/registration/env";
 
 export const supabase = createClient(
     env.supabaseURL,

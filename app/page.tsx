@@ -27,7 +27,7 @@ export default function SignInPage() {
 
                 <Text ta="center" mt="md">
                     Don&apos;t have an account?{' '}
-                    <Anchor fw={500} href="/signUp">Register</Anchor>
+                    <Anchor fw={500} href="/registration">Register</Anchor>
                 </Text>
             </Paper>
         </div>
