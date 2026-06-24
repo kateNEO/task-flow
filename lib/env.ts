@@ -7,7 +7,7 @@ export function readEnv(name: string) {
 }
 
 export const env = {
-    supabaseURL: 'NEXT_PUBLIC_SUPABASE_URL',
-    supabasePublishableKey: 'NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY'
+    supabaseURL: readEnv('NEXT_PUBLIC_SUPABASE_URL'),
+    supabasePublishableKey: readEnv('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY')
 }
 

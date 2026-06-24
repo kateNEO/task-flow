@@ -6,7 +6,7 @@ import {SubmitHandler, useForm} from "react-hook-form";
 
 import {createUser} from "@/app/actions/sign-up";
 
-export interface registrationForm{
+export interface RegistrationFormInterface{
     name: string,
     surname: string,
     email: string,
@@ -14,9 +14,8 @@ export interface registrationForm{
 }
 
 export default function RegistrationForm() {
-    const {register, handleSubmit}= useForm<registrationForm>();
-    const onSubmit:SubmitHandler<registrationForm> = (data: registrationForm) => createUser(data)
-    console.log(supabase)
+    const {register, handleSubmit}= useForm<RegistrationFormInterface>();
+    const onSubmit:SubmitHandler<RegistrationFormInterface> = (data: RegistrationFormInterface) => createUser(data)
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <TextInput label="Name" size="md" radius="md" {...register('name')}/>
